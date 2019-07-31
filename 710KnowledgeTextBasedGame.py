@@ -35,14 +35,14 @@ def start():
 def leftOrRight():
     print("So left or right?")
     userChoice = ""
-        while userChoice not in directions:
-            userChoice = input()
-            if userChoice.lower() == 'left':
-                return 'left'
-            elif userChoice.lower() == 'right':
-                return 'right'
-            else:
-                print("well that wasn't an option, left or right?")
+     while userChoice not in directions:
+        userChoice = input()
+        if userChoice.lower() == 'left':
+            return 'left'
+        elif userChoice.lower() == 'right':
+            return 'right'
+        else:
+            print("well that wasn't an option, left or right?")
 # encodedKnowledge story
 
 def encodedKnowledge():
