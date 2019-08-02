@@ -327,8 +327,12 @@ def enculturedKnowledge():
             time.sleep(1)
             print("But if you insist")
             time.sleep(1)
-            print("Game OVer")
-            sys.exit
+            if(hadBeenToEncoded == 'y'):
+                print("Game Over")
+                sys.exit
+            else:
+                print("You can at least learn about encoded knowledge.")
+                encodedKnowledge()
     elif (enculturedKnowledgeFirstOption == 'b'):
         time.sleep(1)
         print("")
