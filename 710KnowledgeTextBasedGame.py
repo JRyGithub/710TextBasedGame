@@ -295,13 +295,13 @@ def enculturedKnowledge():
         print("")
         print("Yeah, each surgeon and most assisting nurses have their own way of setting things up that makes sense for them. You’ll learn them as you go, just chat to the other nurses and they will help you figure them out.")
         time.sleep(1)
-        print(")")
+        print("")
         print("But what if the current layout is inefficient?” you ask.")
         time.sleep(1)
         print("")
         print("Then change it! Most people will be happy to try something new. And the rest, send to me if you must” they reply.")
         time.sleep(1)
-        print(userName+ "shall we explore how encultured knowledge worked in this scenario?")
+        print(userName+ " shall we explore how encultured knowledge worked in this scenario?")
         enculturedResponse1 = yesOrNo()
         if (enculturedResponse1 == 'y' ):
             print("Encultured knowledge is the process of sharing information by engaging with a culture, in this case the hospitals organisational culture.")
@@ -362,8 +362,12 @@ def enculturedKnowledge():
             time.sleep(1)
 # the end
 def theEnd():
-    print("TBC")
-
-
+    time.sleep(3)
+    print("You've learnt about both forms of knowledge amazing!!!")
+    time.sleep(1)
+    print("We hope you enjoyed this little knowledge game.")
+    time.sleep(1)
+    print("The End")
+    sys.exit
 # start of the program is called
 start()
