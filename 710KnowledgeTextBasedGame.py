@@ -6,6 +6,8 @@ userName = ""
 directions = ['left', 'right', 'forward', 'back']
 noOrYes = ['y', 'n']
 encodedOrEnculturedList = ['encoded', 'encultured']
+hadBeenToEncoded = ""
+hadBeenToEncultured = ""
 
 
 # start of the game get user name and their intial knowledge
@@ -107,6 +109,8 @@ def yesOrNo():
 
 
 def encodedKnowledge():
+    global hadBeenToEncoded
+    hadBeenToEncoded = "y"
     time.sleep(1)
     print(userName+" you are on a small prop plane flying over the Florida Everglades when you hear the")
     time.sleep(1)
@@ -229,25 +233,133 @@ def encodedKnowledge():
             time.sleep(1)
             print("are specific to a field of study or group of people then they have limited ability to provide a vehicle through which to transfer knowledge.")
             time.sleep(1)
-            print(userName+"are you ready to look at encultured knowledge?")
-            yesOrNo2=yesOrNo()
-            if(yesOrNo2 == 'y'):
-                time.sleep(1)
-                enculturedKnowledge()
+            if (hadBeenToEncultured == ''):
+                print(userName+" are you ready to look at encultured knowledge?")
+                yesOrNo2=yesOrNo()
+                if(yesOrNo2 == 'y'):
+                    time.sleep(1)
+                    enculturedKnowledge()
+                else:
+                    time.sleep(1)
+                    print("Your here to learn buddy.")
+                    enculturedKnowledge()
             else:
-                time.sleep(1)
-                print("Your here to learn buddy.")
-                enculturedKnowledge()
+                theEnd()
+                
         else:
             time.sleep(1)
             print("Oh... well. Next up is Encultured Knowledge")
-            time.sleep(1)
+            time.sleep(1) 
+            hadBeenToOtherKnowledgeType == "y"
             enculturedKnowledge()
-# embodiedKnowledge story
-
-
+#encultured knowledge story
 def enculturedKnowledge():
-    print("I currently know nothing about this.")
+    global hadBeenToEncultured
+    hadBeenToEncultured = 'y'
+    print(userName+" it is your first day as a surgical nurse at a new hospital and you are rostered to assist in a common surgery.")
+    time.sleep(1)
+    print("You have performed this surgery before at your previous job.")
+    time.sleep(1) 
+    print("When you enter the Operation Room and look at the set up while waiting for the patient and surgeon to enter.")
+    time.sleep(1)
+    print("As another nurse enters to set up you watched how they laid out the surgical instruments.")
+    time.sleep(1)
+    print("The lay out the instruments in a different order from what you are used to,")
+    time.sleep(1)
+    print("in this instance it doesn’t matter as you are not directly assisting, but you worry about when you have to take the lead in a future surgery.")
+    time.sleep(1)
+    print("")
+    time.sleep(1)
+    print("In your second surgery of the day, you are assisting a different set of nurses and doctors.")
+    time.sleep(1)
+    print("Again you watch the assisting nurse lay out the surgical instruments, and again it is different from what you are used to,")
+    time.sleep(1)
+    print("But more so, its different from last time. You begin to worry…")
+    time.sleep(1)
+    print("What do you do?")
+    print("")
+    time.sleep(1)
+    print("Talk to you charge nurse about the tray layouts? [A]")
+    print("")
+    time.sleep(1)
+    print("Or")
+    print("")
+    time.sleep(1)
+    print("Ignore the layout and just ‘go with the flow’ [B]")
+    enculturedKnowledgeFirstOption = aOrB()
+    if (enculturedKnowledgeFirstOption == 'a'):
+        print("At the end of your first shift your charge nurse catches up with you to see how you found your first day.")
+        time.sleep(1)
+        print("The first thing you ask is about the changing instrument layout. They nod in understanding and say")
+        time.sleep(1)
+        print("")
+        print("Yeah, each surgeon and most assisting nurses have their own way of setting things up that makes sense for them. You’ll learn them as you go, just chat to the other nurses and they will help you figure them out.")
+        time.sleep(1)
+        print(")")
+        print("But what if the current layout is inefficient?” you ask.")
+        time.sleep(1)
+        print("")
+        print("Then change it! Most people will be happy to try something new. And the rest, send to me if you must” they reply.")
+        time.sleep(1)
+        print(userName+ "shall we explore how encultured knowledge worked in this scenario?")
+        enculturedResponse1 = yesOrNo()
+        if (enculturedResponse1 == 'y' ):
+            print("Encultured knowledge is the process of sharing information by engaging with a culture, in this case the hospitals organisational culture.")
+            time.sleep(1)
+            print("By seeing the routines and rituals performed by your new colleagues you noticed anomalies with previous cultures you had interacted with.")
+            time.sleep(1) 
+            print("This opened the opportunity to discuss and negotiate understanding, a hallmark of encultured knowledge.") 
+            time.sleep(1)
+            print("")
+            print("A common language and heavy discourse are necessary components of this type of knowledge transfer.")
+            time.sleep(1)
+            print("As such, this type of knowledge relies on the collective nature of knowledge as it is the combination of individuals within a culture that allows for this form of knowledge transfer.")
+            if(hadBeenToEncoded == 'y'):
+                theEnd()
+            else:
+                time.sleep(2)
+                print("Time to learn about encoded knowledge.")
+                time.sleep(1)
+                encodedKnowledge()
+        elif(enculturedResponse1 == 'n'):
+            time.sleep(1)
+            print("Come on now, thats not the spirit of the game.")
+            time.sleep(1)
+            print("But if you insist")
+            time.sleep(1)
+            print("Game OVer")
+            sys.exit
+    elif (enculturedKnowledgeFirstOption == 'b'):
+        time.sleep(1)
+        print("")
+        print("A few days later, you are the assisting nurse in an appendectomy.")
+        time.sleep(1)
+        print("You set up the instrument tray as you would normally do for this surgery.")
+        time.sleep(1) 
+        print("You don’t think there’ll be an issue until the surgeon asks for a scalpel and reaches to their left and bumps the instrument tray table.")
+        time.sleep(1) 
+        print("You had assumed they were right handed and placed everything in the logical order for you, not them.")
+        time.sleep(1)
+        print("You fumble as you pick up the scalpel, it drops to the floor.")
+        time.sleep(1)
+        print("The withering look from the surgeon does nothing to stop your hands sweating in your gloves.")
+        time.sleep(1)
+        print("")
+        print("Luckily the other assisting nurse swoops in and presses a fresh scalpel into the surgeon’s hand.")
+        time.sleep(1)
+        print("You shoot her a grateful look and duck to retrieve the fallen instrument.")
+        time.sleep(1)
+        print("Retreating to the medical waste disposal unit while the other nurse takes your place next to the surgeon.")
+        print("")
+        time.sleep(1)
+        print("That didn’t go well. Do you want to try again?")
+        enculturedKnowledgeSecondOption = yesOrNo()
+        if (enculturedKnowledgeSecondOption == 'y'):
+            enculturedKnowledge()
+        elif (enculturedKnowledgeSecondOption == 'n'):
+            time.sleep(1)
+            print("Game Over")
+            time.sleep(1)
 # the end
 def theEnd():
     print("TBC")
