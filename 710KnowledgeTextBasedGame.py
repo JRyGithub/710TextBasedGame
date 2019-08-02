@@ -50,13 +50,31 @@ def start():
             else:
                 time.sleep(1)
                 print("That was never a option.")
-    elif (yesOrNo.lower() == 'n'):
+    elif (userYesOrNo.lower() == 'n'):
         time.sleep(1)
-        print("Umm… [NAME] you seem to have missed the point.")
+        print("Umm… "+userName+" you seem to have missed the point.")
         time.sleep(0.5)
         print("Please don’t get trapped in an infinite loop.")
         time.sleep(0.5)
-        print("Would you like to learn about knowledge? [Y/N]")
+        print("Would you like to learn about knowledge?")
+        theySaidNo = ""
+        while theySaidNo != 'y':
+            theySaidNo = yesOrNo()
+            time.sleep(1)
+            print("That was never a option.")
+        print("So, where you do you want to start?")
+        time.sleep(0.5)
+        print("[encoded/encultured]")
+        encodedOrEncultured = ""
+        while encodedOrEncultured not in encodedOrEnculturedList:
+            encodedOrEncultured = input()
+            if (encodedOrEncultured.lower() == 'encoded'):
+                encodedKnowledge()
+            elif (encodedOrEncultured.lower() == 'encultured'):
+                enculturedKnowledge()
+            else:
+                time.sleep(1)
+                print("That was never a option.")
 
 # Direction or YesNo method, simply gets userInput of either left, right, y or n depending on variable direction or yesOrNo
 
@@ -150,10 +168,10 @@ def encodedKnowledge():
     elif(userChoiceEncoded1 == 'b'):
         print("You quickly flick open the leaflet and are relieved to see diagram pictures of house to use the parachute.")
         time.sleep(1)
-        print("You quickly realise that what you had assumed to be the rip cord was")
+        print("You realise that what you had assumed to be the rip cord")
         time.sleep(1)
         print(
-            "merely a tightening mechanism to keep the parachute firmly on your back.")
+            "was merely a tightening mechanism to keep the parachute firmly on your back.")
         time.sleep(1)
         print("The actual rip cord is on the bottom of the backpack. You look up to see the smugglers doing the same.")
         time.sleep(1)
@@ -186,30 +204,45 @@ def encodedKnowledge():
         time.sleep(1)
         print("You look around you to see the majority of the crew doing the same at varying degrees of proximity to you.")
         time.sleep(2)
-        print(userName + "do you want to understand how the theory of encoded knowledge worked in this scenario?")
+        print(userName + " do you want to understand how the theory of encoded knowledge worked in this scenario?")
         userChoiceEncoded2=yesOrNo()
         if (userChoiceEncoded2 == 'y'):
             print(
                 "In the scenario the use of pictograms exemplified encoded knowledge as by")
+            time.sleep(1)
             print("using images of people and the related tangible items there was no need for domain expertise in order to understand.")
+            time.sleep(1)
             print("This is particularly true of the time delay provided. As analogue clocks are almost universally understood this information was presented")
+            time.sleep(1)
             print(
                 "in a was that was more practical than if a subject specific metric, like altitude had been used.")
+            time.sleep(1)
             print("This form of knowledge transfer is regularly employed by traditional airlines as it allows for speakers of different")
+            time.sleep(1)
             print(
                 "languages to understand what is expected of them during the flight and emergencies.")
             time.sleep(2)
             print(
                 "Encoded knowledge is focused on this transference through symbols and signs and acts as a format")
+            time.sleep(1)
             print("to convey other information easily. Foundational to this is this idea of collective understanding as if the symbols")
+            time.sleep(1)
             print("are specific to a field of study or group of people then they have limited ability to provide a vehicle through which to transfer knowledge.")
+            time.sleep(1)
             print(userName+"are you ready to look at encultured knowledge?")
             yesOrNo2=yesOrNo()
             if(yesOrNo2 == 'y'):
+                time.sleep(1)
                 enculturedKnowledge()
             else:
+                time.sleep(1)
                 print("Your here to learn buddy.")
                 enculturedKnowledge()
+        else:
+            time.sleep(1)
+            print("Oh... well. Next up is Encultured Knowledge")
+            time.sleep(1)
+            enculturedKnowledge()
 # embodiedKnowledge story
 
 
