@@ -366,12 +366,76 @@ def enculturedKnowledge():
             time.sleep(1)
 # the end
 def theEnd():
+    print("Congratulations "+userName+", you’ve successfully navigated both scenarios.") 
+    time.sleep(1)
+    print("But before we let you go, we have a little quiz for you:")
+    time.sleep(1)
+    print("")
+    question1()
+    question2()
+    question3()
+
+def question1():
+    print("Question 1: Based on the understanding of tacit being knowledge that cannot be codified (written down) do you think that encultured knowledge is inherently tacit?")
+    time.sleep(1)
+    question1 == yesOrNo()
+    if (question1 == 'y'):
+        print("That’s correct: as encultured knowledge relies understanding information and cues that are difficult to codify.")
+        time.sleep(1)
+        print("In the scenario of the operating room nurse, having a knowledge management system outlining how every surgeon and doctor liked their instruments to be set up would not have worked.")
+        time.sleep(1)
+        print("as these preferences could and would change with different interactions.")
+    else:
+        print("That’s incorrect: as encultured knowledge relies understanding information and cues that are difficult to codify.")
+        time.sleep(1) 
+        print("In the scenario of the operating room nurse, having a knowledge management system outlining how every surgeon and doctor liked their instruments to be set up would not have worked")
+        time.sleep(1)
+        print("As these preferences could and would change with different interactions.")
+        time.sleep(1)
+
+def question2():
+    print("Question 2: Do you think encoded knowledge and encultured knowledge are?")
+    time.sleep(1)
+    print("")
+    print("[A] More similar to each other")
+    print("")
+    time.sleep(1)
+    print("[B] Or more different from each other")
+    question2Result = aOrB()
     time.sleep(3)
-    print("You've learnt about both forms of knowledge amazing!!!")
+    print("It’s a bit of a trick question.")
     time.sleep(1)
-    print("We hope you enjoyed this little knowledge game.")
+    print("There are some ways in which they are similar: both being part of a collective understanding of knowledge.")
     time.sleep(1)
-    print("The End")
-    sys.exit
+    print("And other ways in which they are different: one relies on context and shared language.")
+    time.sleep(1)
+    print("While the other is independent of these constraints.")
+def question3():
+    print("Question 3: An easy one for you, would you consider encoded knowledge to be explicit (able to be written down/codified)?")
+    question3Response = yesOrNo()
+    if (question3Response == 'y'):
+        print("Bingo! The basis of encoded knowledge is the idea that information can be written in symbols in physical or digital means.")
+        time.sleep(1)
+        print("")
+        print("And with that final success we bid you adieu!")
+        print("")
+        time.sleep(1)
+        print("Thank you "+userName+" for playing along!")
+        print("We hope you go away from this knowing more about knowledge!")
+        sys.exit
+
+    else:
+        print("In all honesty, a little disappointed you’re on this screen, we expected more from you!")
+        print("")
+        time.sleep(1)
+        print("Ah well, we have come to the end.")
+        time.sleep(1)
+        print("")
+        print("Thank you "+userName+" for playing along!")
+        time.sleep(1)
+        print("We hope you go away from this knowing more about knowledge!")
+        sys.exit
+
+
 # start of the program is called
 start()
